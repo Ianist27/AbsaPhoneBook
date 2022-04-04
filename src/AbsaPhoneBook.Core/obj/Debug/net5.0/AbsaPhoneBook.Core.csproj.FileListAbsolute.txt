@@ -1,0 +1,15 @@
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\bin\Debug\net5.0\AbsaPhoneBook.Core.deps.json
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\bin\Debug\net5.0\AbsaPhoneBook.Core.dll
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\bin\Debug\net5.0\AbsaPhoneBook.Core.pdb
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\bin\Debug\net5.0\AbsaPhoneBook.SharedKernel.dll
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\bin\Debug\net5.0\AbsaPhoneBook.SharedKernel.pdb
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.csproj.AssemblyReference.cache
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.AssemblyInfoInputs.cache
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.AssemblyInfo.cs
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.csproj.CoreCompileInputs.cache
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.csproj.CopyComplete
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.dll
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\ref\AbsaPhoneBook.Core.dll
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\AbsaPhoneBook.Core.pdb
+C:\Dev Base\Assessments\AbsaPhoneBook\AbsaPhoneBook\src\AbsaPhoneBook.Core\obj\Debug\net5.0\refint\AbsaPhoneBook.Core.dll

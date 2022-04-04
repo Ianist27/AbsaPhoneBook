@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AbsaPhoneBook.Web.Models.PhoneBookViewModel>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <!-- Card header -->
+            <div class="card-header">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <h4 class="heading-small text-muted">Phonebook List</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">PhoneNumber</th>
+                            <th scope="col">Created By</th>
+                            <th scope="col">Created Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var phoneBook in Model.OrderBy(x => x.Name))
+                        {
+                            @foreach (var entry in phoneBook.Entries.OrderBy(x => x.Name))
+                            {
+                                <tr>
+                                    <td>@entry.Name</td>
+                                    <td>@entry.PhoneNumber</td>
+                                    <td>@entry.CreatedBy</td>
+                                    <td>@entry.CreatedDate</td>
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

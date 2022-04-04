@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Absa Phonebook";
+    Layout = "_Layout";
+}
+
+@using AbsaPhoneBook.Web.Models
+
+@model EntryViewModel
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <!-- Card header -->
+            <div class="row ml-0">
+                <div class="card-header border-0">
+                    <span class="text-muted">
+                        <b>
+                            Phonebook
+                        </b>
+                    </span>
+                    <span>
+                        <button class="btn btn-icon btn-primary btn-sm" type="button" data-toggle="modal" data-target="#addphoneBookModal">
+                            <span class="btn-inner--text">Add PhoneBook</span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="row ml-0">
+                @using (Html.BeginForm("GetPhonebook", "Home", FormMethod.Post))
+                {
+                    <div class="input-group">
+                        <input type="text" class="form-control" asp-for="Name" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="addphoneBookModal" tabindex="-1" role="dialog" aria-labelledby="addPhoneBookModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="main">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Phonebook</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+                        {
+                            <div class="modal-body">
+                                <div class="form-group mb-3">
+                                    <label class="form-control-label" for="name">Name</label>
+                                    <input asp-for="Name" class="form-control" type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="desc">Phone Number</label>
+                                    <input asp-for="PhoneNumber" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            @if (!string.IsNullOrWhiteSpace(TempData["StatusMessage"] as string))
+            {
+                <!-- everything went ok -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert-success">@TempData["StatusMessage"]</div>
+                    </div>
+                </div>
+            }
+
+            @*model has errors *@
+            @if (!ViewData.ModelState.IsValid && ViewData.ModelState[string.Empty] != null)
+            {
+                <!-- errors -->
+                @foreach (var error in @ViewData.ModelState[string.Empty]?.Errors)
+                {
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert-warning">@error.ErrorMessage</div>
+                        </div>
+                    </div>
+                }
+            }
+
+            @if (ViewBag.PhoneBooks != null)
+            {
+                @await Html.PartialAsync("_PhonebookList", (List<PhoneBookViewModel>)ViewBag.PhoneBooks)
+            }
+
+        </div>
+    </div>
+</div>
